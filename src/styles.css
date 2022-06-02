@@ -21,9 +21,11 @@ li {
   font-weight: 100;
   line-height: 19px;
   list-style: none;
+  text-transform: capitalize;
   margin: 0;
   padding: 0;
 }
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -42,7 +44,7 @@ li {
 }
 .temperature {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 80px;
   font-weight: 400;
   line-height: 1;
 }
