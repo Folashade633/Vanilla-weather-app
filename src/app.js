@@ -43,8 +43,18 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].icon.description);
 }
 
-let city = "Abuja";
-let apiKey = "ef338f15103ddb4f3d78cb7b6408d7e7";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function searchCity(city) {
+  let apiKey = "ef338f15103ddb4f3d78cb7b6408d7e7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
