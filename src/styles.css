@@ -50,6 +50,13 @@ li:first-letter {
   background-color: rgb(15, 228, 165);
   color: #dadde1;
 }
+.btn-success {
+  background-color: rgb(15, 228, 165);
+}
+.btn-primary {
+  background-color: rgb(15, 228, 165);
+}
+
 .search-form {
   margin-bottom: 20px;
 }

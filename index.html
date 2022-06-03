@@ -21,22 +21,27 @@
         <div class="weather-app">
           <form class="search-form" id="search-form">
             <div class="row">
-              <div class="col-9">
+              <div class="col-6">
                 <input
                   type="search"
                   placeholder="Enter a city.."
                   id="city-input"
-                  class="form-control shadow-sm"
+                  class="form-control shadow-sm w-100"
                   autofocus="on"
                   autocomplete="off"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-2">
                 <input
                   type="submit"
                   value="Search"
                   class="form-control btn btn-success shadow-sm"
                 />
+              </div>
+              <div class="col-3">
+                <button class="btn btn-primary" id="current--location-button">
+                  Current
+                </button>
               </div>
             </div>
           </form>
