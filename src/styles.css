@@ -1,8 +1,14 @@
 body {
   font-family: "DM Serif Display", serif;
-  background-color: rgb(40, 12, 105);
+  background-color: linear gradient (rgb(123, 184, 105), rgb(13, 87, 10));
   margin: 20px auto;
   max-width: 700px;
+}
+container {
+  height: 20px;
+  width: 240px;
+  background-color: rgb(15, 228, 165);
+  text-align: center;
 }
 
 h1 {
@@ -41,7 +47,8 @@ li:first-letter {
   padding: 20px;
   margin: 30px auto;
   border-radius: 5px;
-  background-image: linear gradient (to top, #eef1f5 100);
+  background-color: rgb(15, 228, 165);
+  color: #dadde1;
 }
 .weather-icon {
   height: 64px;
@@ -74,6 +81,5 @@ li:first-letter {
   margin-bottom: 20px;
 }
 .footer {
-  padding: 15px;
-  margin: 30px auto;
+  color: #fff;
 }
