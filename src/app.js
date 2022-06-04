@@ -20,10 +20,10 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-function formatDay(timestamp){
-let date = new Date(timestamp*1000);
-let day = date.getDay();
-let days = [
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -35,23 +35,54 @@ let days = [
   return days[day];
 }
 
-
-function displayForecsat(response) {
-  let forecast = response.data.daily;
-  let forecastElement=document.querySelector("#forecast");
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"]; 
-
-  let forecastHTML = `<div class ="row">`;
-  forecast.forEach(function(forecast, index) {
-    if (index < 6) {
-      forecastHTML = forecastHTML + <div class = 
-    }
-  }
-    
-  
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
 }
 
-function displayTemperature(response) {
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class ="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class = "col-sm one">;
+      <div class ="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+      <Img 
+      src = "http://openweathermap.org/img/wn${
+        forecastDay.weather[0].icon
+      }@2x.png"
+      alt =""
+      width = "42"
+      />
+      <span class ="weather- forecast- temp-max">${Math.round(
+        forecastDay.temp.max
+      )}° </span>
+      <span class ="weather- forecast- temp-min">${Math.round(
+        forecastDay.temp.max
+      )}° </span>
+        </div>
+        `;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function displayTempearature(response) {
   let cityElement = document.querySelector("#city");
   let dateElement = document.querySelector("#date");
   let descriptionElement = document.querySelector("#description");
@@ -74,6 +105,7 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].icon.description);
   fahrenheitLink.classList.add("active");
   celsiusLink.classList.remove("active");
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
