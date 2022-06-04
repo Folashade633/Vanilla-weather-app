@@ -89,8 +89,8 @@ li:first-letter {
   text-decoration: none;
 }
 
-.footer {
-  color: #fff;
+.small {
+  text-align: center;
 }
 .weather-forecast {
   margin-top: 20px;
