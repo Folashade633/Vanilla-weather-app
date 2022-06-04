@@ -68,11 +68,11 @@ function displayForecast(response) {
       alt =""
       width = "42"
       />
-      <span class ="weather- forecast- temp-max">${Math.round(
+      <span class ="weather- forecast-temperature-max">${Math.round(
         forecastDay.temp.max
       )}° </span>
-      <span class ="weather- forecast- temp-min">${Math.round(
-        forecastDay.temp.max
+      <span class ="weather- forecast- temperature-min">${Math.round(
+        forecastDay.temp.min
       )}° </span>
         </div>
         `;
@@ -81,8 +81,7 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-function displayTempearature(response) {
+function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let dateElement = document.querySelector("#date");
   let descriptionElement = document.querySelector("#description");
@@ -124,7 +123,7 @@ function handleSubmit(event) {
 function showPosition(position) {
   let apiKey = "ef338f15103ddb4f3d78cb7b6408d7e7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeatherCondition);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentPosition() {
