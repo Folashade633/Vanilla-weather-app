@@ -57,7 +57,7 @@ li:first-letter {
   background-color: rgb(15, 228, 165);
 }
 
-.search-form {
+.overview {
   margin-bottom: 20px;
 }
 
@@ -92,18 +92,18 @@ li:first-letter {
 .footer {
   color: #fff;
 }
-.forecast {
+.weather-forecast {
   margin-top: 20px;
   text-align: center;
   color: #000;
 }
 
-.forecast-date {
+.weather-forecast-date {
   opacity: 0.5;
   font-size: 16px;
 }
 
-.temperature-min {
+.weather-temperature-min {
   opacity: 0.5;
 }
 .forecast-temperatures {
