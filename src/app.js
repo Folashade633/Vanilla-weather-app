@@ -20,6 +20,36 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function formatDay(timestamp){
+let date = new Date(timestamp*1000);
+let day = date.getDay();
+let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
+
+function displayForecsat(response) {
+  let forecast = response.data.daily;
+  let forecastElement=document.querySelector("#forecast");
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"]; 
+
+  let forecastHTML = `<div class ="row">`;
+  forecast.forEach(function(forecast, index) {
+    if (index < 6) {
+      forecastHTML = forecastHTML + <div class = 
+    }
+  }
+    
+  
+}
 
 function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
