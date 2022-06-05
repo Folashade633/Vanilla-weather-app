@@ -109,3 +109,7 @@ li:first-letter {
 .forecast-temperatures {
   font-size: 13px;
 }
+.col-sm.one {
+  border: solid 1px white;
+  border-radius: 0 5px 5px 0;
+}
