@@ -1,22 +1,14 @@
 body {
   font-family: "DM Serif Display", serif;
   background-color: linear gradient (rgb(123, 184, 105), rgb(13, 87, 10));
-  margin: 20px auto;
-  max-width: 700px;
-}
-container {
-  height: 20px;
-  width: 240px;
-  background-color: rgb(15, 228, 165);
-  text-align: center;
 }
 
 h1 {
-  color: rgb(32, 33, 36);
   font-size: 24px;
   font-weight: 100;
+  color: rgb(32, 33, 36);
   line-height: 28px;
-  margin: 0;
+  margin-bottom: 0;
 }
 
 ul {
@@ -25,7 +17,7 @@ ul {
 }
 
 li {
-  color: #878787;
+  color: black;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
@@ -45,10 +37,8 @@ li:first-letter {
 .weather-app {
   border: 2px solid rgb(15, 228, 165);
   padding: 20px;
-  margin: 30px auto;
   border-radius: 5px;
   background-color: rgb(15, 228, 165);
-  color: #dadde1;
 }
 .btn-success {
   background-color: rgb(15, 228, 165);
